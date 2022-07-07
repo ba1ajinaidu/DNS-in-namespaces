@@ -1,0 +1,26 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+zone "." {
+    type hint;
+    file "/etc/bind/root.hints";
+};
+
+zone "gtld-server.tcl" {
+    type master;
+    file "/etc/bind/zones/db.gtld-server.tcl"; # zone file path
+};
+
+zone "tcl" {
+    type master;
+    file "/etc/bind/zones/db.tcl"; 
+};
+
+zone "test.tcl" {
+	type master;
+	file "/etc/bind/zones/db.test.tcl";
+};
