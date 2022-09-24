@@ -1,0 +1,13 @@
+test.tcl {
+    file  /etc/coredns/test.tcl.db
+    log
+	cache
+	errors
+}
+
+. {
+    forward 8.8.8.8 8.8.4.4
+    log
+    cache
+    errors
+}

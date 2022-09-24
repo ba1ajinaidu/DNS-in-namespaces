@@ -1,0 +1,11 @@
+https://. {
+    tls /etc/coredns/tls.crt  /etc/coredns/tls.key {
+	client_auth nocert	
+    }
+    unbound {
+        option root-hints "/etc/coredns/root.hints"
+    }
+    log
+    errors
+}
+
